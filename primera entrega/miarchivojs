@@ -1,0 +1,25 @@
+
+class Cliente {
+    constructor(nombre, apellido, edad, usuario, contrasena) {
+        this.nombre = nombre
+        this.apellido = apellido
+        this.edad = edad
+        this.usuario = usuario
+        this.contrasena = contrasena
+    }
+}
+
+const cliente1 = new Cliente(prompt("ingrese su nombre"), prompt("ingrese su apellido"), parseInt(prompt("ingrese su edad")), prompt("ingrese su usuario"), prompt("ingrese su contrasena"))
+const cliente2 = new Cliente(prompt("ingrese su nombre"), prompt("ingrese su apellido"), parseInt(prompt("ingrese su edad")), prompt("ingrese su usuario"), prompt("ingrese su contrasena"))
+const cliente3 = new Cliente(prompt("ingrese su nombre"), prompt("ingrese su apellido"), parseInt(prompt("ingrese su edad")), prompt("ingrese su usuario"), prompt("ingrese su contrasena"))
+const cliente4 = new Cliente(prompt("ingrese su nombre"), prompt("ingrese su apellido"), parseInt(prompt("ingrese su edad")), prompt("ingrese su usuario"), prompt("ingrese su contrasena"))
+const clientes= [cliente1, cliente2, cliente3, cliente4]
+
+clientes.forEach(cliente => { console.log(cliente) })
+
+let nombreABuscar = prompt("ingrese nombre del cliente a buscar")
+let apellidoABuscar = prompt("ingrese apellido del cliente a buscar")
+
+console.log(clientes.find(cliente => cliente.nombre == nombreABuscar && usuario.apellido == apellidoABuscar))
+
+alert("Gracias por su busqueda.")
